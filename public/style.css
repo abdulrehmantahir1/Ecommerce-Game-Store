@@ -1,0 +1,194 @@
+/* General Reset & Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Shared Body Style */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ---------------- LOGIN.HTML ---------------- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-box {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-box h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  text-align: left;
+  margin: 0.5rem 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.link-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.link-text a {
+  color: #1e3c72;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-text a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- BUTTON ---------------- */
+button {
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* ---------------- HEADER & NAV ---------------- */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+
+/* ---------------- PRODUCTS.HTML ---------------- */
+#product-list, #featured-products {
+  display: block;
+  margin-top: 20px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* ---------------- PRODUCT_DETAIL.HTML ---------------- */
+#product-detail {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+/* ---------------- CART.HTML ---------------- */
+#cart-items {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px black;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item .price {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+#cart-total {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #050505;
+  display: block;
+  text-align: right;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Checkout Button */
+a[href="checkout.html"] {
+  display: block;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+  text-decoration: none;
+}

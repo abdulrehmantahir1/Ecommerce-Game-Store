@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    input, select {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  background: #fefefe;
+}
+
+th {
+  background-color: #f1f1f1;
+}
+  </style>
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="admin.html">Home</a>
+      <a href="admin_products.html">Products</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+  <h1>Admin Dashboard</h1>
+
+  <section>
+    <h2>Add Game</h2>
+    <input id="add-title" placeholder="Title" />
+    <input id="add-description" placeholder="Description" />
+    <input id="add-price" type="number" step="0.01" placeholder="Price" />
+    <input id="add-genre" placeholder="Genre" />
+    <input id="add-platform" placeholder="Platform" />
+    <input id="add-stock" type="number" placeholder="Stock Quantity" />
+    <button onclick="addGame()">Add Game</button>
+  </section>
+
+  <section>
+    <h2>Update Game</h2>
+    <input id="update-id" type="number" placeholder="Game ID" />
+    <input id="update-title" placeholder="Title" />
+    <input id="update-description" placeholder="Description" />
+    <input id="update-price" type="number" step="0.01" placeholder="Price" />
+    <input id="update-genre" placeholder="Genre" />
+    <input id="update-platform" placeholder="Platform" />
+    <button onclick="updateGame()">Update Game</button>
+  </section>
+
+  <section>
+    <h2>Delete Game</h2>
+    <input id="delete-id" type="number" placeholder="Game ID" />
+    <button onclick="deleteGame()">Delete Game</button>
+  </section>
+
+  <section>
+    <h2>Update Order Status</h2>
+    <input id="order-id" type="number" placeholder="Order ID" />
+    <select id="order-status">
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+      <option value="Cancelled">Cancelled</option>
+    </select>
+    <button onclick="updateOrderStatus()">Update Status</button>
+  </section>
+
+<section>
+    <h2>All Games</h2>
+    <button onclick="fetchGames()">Refresh Games</button>
+    <table border="1" id="games-table">
+      <thead>
+        <tr>
+          <th>ID</th><th>Title</th><th>Price</th><th>Genre</th><th>Platform</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+  
+  <section>
+    <h2>All Orders</h2>
+    <button onclick="fetchOrders()">Refresh Orders</button>
+    <table border="1" id="orders-table">
+      <thead>
+        <tr>
+          <th>Order ID</th><th>User ID</th><th>Status</th><th>Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+  
+
+  <script src="admin.js"></script>
+</body>
+</html>

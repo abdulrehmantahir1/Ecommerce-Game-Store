@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - MyStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Checkout</h1>
+  <form id="checkout-form">
+    <label>Full Name: <input type="text" name="name" required></label><br>
+    <label>Address: <input type="text" name="address" required></label><br>
+
+    <label>Payment Method:
+      <select id="payment-method">
+        <option value="COD">Cash on Delivery</option>
+        <option value="Credit">Credit</option>
+        <option value="Debit">Debit</option>
+      </select>
+      
+      
+      
+    </label><br>
+
+    <label>Payment Status:
+      <select id="payment-status">
+        <option value="Completed">Paid</option>
+        <option value="Pending">Unpaid</option>
+        <option value="Failed">Failed</option>
+      </select>
+    </label><br>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <script src="cart.js"></script> <!-- separate JS from cart.js -->
+</body>
+</html>
